@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+
+# Redirect default Netlify subdomain to primary domain (if custom domain is set)
+# [[redirects]]
+#   from = "https://intentra.netlify.app/*"
+#   to = "https://yourdomain.com/:splat"
+#   status = 301
+#   force = true
