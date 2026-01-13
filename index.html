@@ -25,13 +25,14 @@
       <section class="hero-section">
         <div class="container">
           <h1 class="hero-headline">Curious how the market looks for vehicles like yours?</h1>
-          <p class="hero-subhead">See general market activity — no pricing, no commitment, just helpful information.</p>
+          <p class="hero-subhead">Explore general market activity — no pricing, no obligation, just information to satisfy your curiosity.</p>
         </div>
       </section>
 
       <!-- Input Section -->
       <section class="input-section" id="vehicle-form-section">
         <div class="container container-narrow">
+          <p class="anonymous-notice">No account needed. Explore anonymously.</p>
           <div class="form-card">
             <h2 class="section-title">Your vehicle — just the basics</h2>
             <p class="helper-text">No VIN required. This helps us show you relevant market information.</p>
@@ -115,9 +116,9 @@
 
               <div class="cta-wrapper">
                 <button type="submit" class="btn btn-primary" id="submit-btn">
-                  Check Market Interest
+                  See What the Market Looks Like
                 </button>
-                <p class="trust-microcopy">No obligation. Just information.</p>
+                <p class="trust-microcopy">No obligation. No pricing. Just information.</p>
               </div>
             </form>
           </div>
@@ -146,11 +147,11 @@
 
             <!-- Secondary CTA - appears after results -->
             <div class="secondary-cta-wrapper">
-              <p class="followup-prompt">Want to learn more about what this means for you?</p>
+              <p class="followup-prompt">Curious to learn more?</p>
               <button type="button" class="btn btn-secondary" id="learn-more-btn">
                 Request More Information
               </button>
-              <p class="trust-microcopy">We'll only follow up if you ask us to.</p>
+              <p class="trust-microcopy">Completely optional — we'll only reach out if you ask.</p>
             </div>
           </div>
         </div>
@@ -160,23 +161,17 @@
       <section class="contact-section" id="contact-section" hidden>
         <div class="container container-narrow">
           <div class="contact-card">
-            <h2 class="section-title">Stay in touch</h2>
-            <p class="helper-text">Share your details and we'll reach out with more information when you're ready.</p>
+            <h2 class="section-title">Want to learn more?</h2>
+            <p class="helper-text">If you're curious, share a few details and we'll send you more information.</p>
 
             <form id="contact-form" class="contact-form" name="market-interest" method="POST" data-netlify="true">
               <input type="hidden" name="form-name" value="market-interest">
               <input type="hidden" name="vehicle-info" id="hidden-vehicle-info">
               <input type="hidden" name="interest-level" id="hidden-interest-level">
 
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="first-name">First Name</label>
-                  <input type="text" id="first-name" name="first-name" required>
-                </div>
-                <div class="form-group">
-                  <label for="last-name">Last Name</label>
-                  <input type="text" id="last-name" name="last-name" required>
-                </div>
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required>
               </div>
 
               <div class="form-group">
@@ -189,16 +184,11 @@
                 <input type="tel" id="phone" name="phone">
               </div>
 
-              <div class="form-group">
-                <label for="zip">ZIP Code</label>
-                <input type="text" id="zip" name="zip" pattern="[0-9]{5}" maxlength="5" required>
-              </div>
-
               <div class="cta-wrapper">
                 <button type="submit" class="btn btn-primary">
-                  Send My Information
+                  Request More Information
                 </button>
-                <p class="trust-microcopy">No pricing shown. No pressure.</p>
+                <p class="trust-microcopy">Your information is only used if you choose to share it.</p>
               </div>
             </form>
           </div>
@@ -216,7 +206,7 @@
               </svg>
             </div>
             <h2 class="section-title">You're all set</h2>
-            <p class="success-message">Thanks for your interest. We've received your information and will be in touch soon — only if you want us to be.</p>
+            <p class="success-message">Thanks for your interest. We've received your information and will be in touch — only because you asked us to be.</p>
             <button type="button" class="btn btn-secondary" id="start-over-btn">
               Check Another Vehicle
             </button>
@@ -229,6 +219,16 @@
     <footer class="site-footer">
       <div class="container">
         <p class="footer-text">A simple way to explore market interest — no pressure, no commitment.</p>
+
+        <!-- Privacy Note -->
+        <div class="privacy-note">
+          <p class="privacy-title">Your Privacy</p>
+          <p class="privacy-text">
+            You can explore anonymously — no account or personal information required to see results.
+            Your information is never sold, and we don't identify you through IP addresses or cookies.
+            We only reach out if you choose to share your details.
+          </p>
+        </div>
       </div>
     </footer>
   </div>

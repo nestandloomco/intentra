@@ -260,7 +260,15 @@ input, button, textarea, select {
 
 .input-section,
 .contact-section {
-  padding: var(--spacing-xl) 0 var(--spacing-3xl);
+  padding: var(--spacing-2xl) 0 var(--spacing-4xl);
+}
+
+/* Anonymous Notice */
+.anonymous-notice {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
 }
 
 .vehicle-form,
@@ -397,8 +405,9 @@ select {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-lg);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-lg);
 }
 
 .trust-microcopy {
@@ -425,7 +434,7 @@ select {
    ============================================ */
 
 .results-section {
-  padding: var(--spacing-xl) 0 var(--spacing-3xl);
+  padding: var(--spacing-2xl) 0 var(--spacing-4xl);
 }
 
 .results-intro {
@@ -546,7 +555,7 @@ select {
    ============================================ */
 
 .site-footer {
-  padding: var(--spacing-2xl) 0;
+  padding: var(--spacing-3xl) 0;
   text-align: center;
   background-color: var(--color-surface);
   border-top: 1px solid var(--color-border);
@@ -556,6 +565,30 @@ select {
 .footer-text {
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Privacy Note */
+.privacy-note {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  background-color: var(--color-gray-50);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.privacy-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.privacy-text {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
 }
 
 /* ============================================
