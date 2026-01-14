@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intentra - Automotive Market Intelligence</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+        }
+
+        .logo {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #4a90d9 0%, #67b7dc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: #a0aec0;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature h3 {
+            color: #67b7dc;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .feature p {
+            color: #a0aec0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .status {
+            background: rgba(74, 144, 217, 0.1);
+            border: 1px solid rgba(74, 144, 217, 0.3);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+        }
+
+        .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #4a90d9;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        footer {
+            position: fixed;
+            bottom: 1rem;
+            color: #4a5568;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">Intentra</h1>
+        <p class="tagline">Automotive Market Intelligence Platform</p>
+
+        <div class="features">
+            <div class="feature">
+                <h3>Strategic Insight</h3>
+                <p>Interpret demand signals and market readiness based on vehicle characteristics</p>
+            </div>
+            <div class="feature">
+                <h3>Timing Analysis</h3>
+                <p>Identify optimal acquisition windows with data-driven recommendations</p>
+            </div>
+            <div class="feature">
+                <h3>Risk Assessment</h3>
+                <p>Evaluate market dynamics and vehicle-specific risk factors</p>
+            </div>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            Platform Coming Soon
+        </div>
+    </div>
+
+    <footer>
+        Intentra - Vehicle Acquisition Intelligence
+    </footer>
+</body>
+</html>
