@@ -1,135 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intentra - Automotive Market Intelligence</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-        }
-
-        .container {
-            text-align: center;
-            padding: 2rem;
-            max-width: 800px;
-        }
-
-        .logo {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(90deg, #4a90d9 0%, #67b7dc 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .tagline {
-            font-size: 1.25rem;
-            color: #a0aec0;
-            margin-bottom: 3rem;
-            font-weight: 300;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .feature {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .feature h3 {
-            color: #67b7dc;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .feature p {
-            color: #a0aec0;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        .status {
-            background: rgba(74, 144, 217, 0.1);
-            border: 1px solid rgba(74, 144, 217, 0.3);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            display: inline-block;
-        }
-
-        .status-dot {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background: #4a90d9;
-            border-radius: 50%;
-            margin-right: 8px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        footer {
-            position: fixed;
-            bottom: 1rem;
-            color: #4a5568;
-            font-size: 0.875rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore general market activity for vehicles like yours. No pressure, no pricing — just information.">
+  <title>Market Interest Check | Intentra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="logo">Intentra</h1>
-        <p class="tagline">Automotive Market Intelligence Platform</p>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <a href="/" class="logo">Intentra</a>
+      </div>
+    </header>
 
-        <div class="features">
-            <div class="feature">
-                <h3>Strategic Insight</h3>
-                <p>Interpret demand signals and market readiness based on vehicle characteristics</p>
-            </div>
-            <div class="feature">
-                <h3>Timing Analysis</h3>
-                <p>Identify optimal acquisition windows with data-driven recommendations</p>
-            </div>
-            <div class="feature">
-                <h3>Risk Assessment</h3>
-                <p>Evaluate market dynamics and vehicle-specific risk factors</p>
-            </div>
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <h1 class="hero-headline">Curious how the market looks for vehicles like yours?</h1>
+          <p class="hero-subhead">Explore general market activity — no pricing, no obligation, just information to satisfy your curiosity.</p>
         </div>
+      </section>
 
-        <div class="status">
-            <span class="status-dot"></span>
-            Platform Coming Soon
+      <!-- Input Section -->
+      <section class="input-section" id="vehicle-form-section">
+        <div class="container container-narrow">
+          <p class="anonymous-notice">No account needed. Explore anonymously.</p>
+          <div class="form-card">
+            <h2 class="section-title">Your vehicle — just the basics</h2>
+            <p class="helper-text">No VIN required. This helps us show you relevant market information.</p>
+
+            <form id="vehicle-form" class="vehicle-form">
+              <div class="form-group">
+                <label for="vehicle-year">Year</label>
+                <select id="vehicle-year" name="year" required>
+                  <option value="">Select year</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="vehicle-make">Make</label>
+                <select id="vehicle-make" name="make" required>
+                  <option value="">Select make</option>
+                  <option value="acura">Acura</option>
+                  <option value="alfa-romeo">Alfa Romeo</option>
+                  <option value="audi">Audi</option>
+                  <option value="bmw">BMW</option>
+                  <option value="buick">Buick</option>
+                  <option value="cadillac">Cadillac</option>
+                  <option value="chevrolet">Chevrolet</option>
+                  <option value="chrysler">Chrysler</option>
+                  <option value="dodge">Dodge</option>
+                  <option value="ford">Ford</option>
+                  <option value="genesis">Genesis</option>
+                  <option value="gmc">GMC</option>
+                  <option value="honda">Honda</option>
+                  <option value="hyundai">Hyundai</option>
+                  <option value="infiniti">Infiniti</option>
+                  <option value="jaguar">Jaguar</option>
+                  <option value="jeep">Jeep</option>
+                  <option value="kia">Kia</option>
+                  <option value="land-rover">Land Rover</option>
+                  <option value="lexus">Lexus</option>
+                  <option value="lincoln">Lincoln</option>
+                  <option value="mazda">Mazda</option>
+                  <option value="mercedes-benz">Mercedes-Benz</option>
+                  <option value="mini">MINI</option>
+                  <option value="mitsubishi">Mitsubishi</option>
+                  <option value="nissan">Nissan</option>
+                  <option value="porsche">Porsche</option>
+                  <option value="ram">Ram</option>
+                  <option value="subaru">Subaru</option>
+                  <option value="tesla">Tesla</option>
+                  <option value="toyota">Toyota</option>
+                  <option value="volkswagen">Volkswagen</option>
+                  <option value="volvo">Volvo</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="vehicle-model">Model</label>
+                <input type="text" id="vehicle-model" name="model" placeholder="e.g., Camry, F-150, Model 3" required>
+              </div>
+
+              <div class="form-group">
+                <label for="vehicle-mileage">Approximate Mileage</label>
+                <select id="vehicle-mileage" name="mileage" required>
+                  <option value="">Select range</option>
+                  <option value="0-15000">Under 15,000 miles</option>
+                  <option value="15000-30000">15,000 – 30,000 miles</option>
+                  <option value="30000-50000">30,000 – 50,000 miles</option>
+                  <option value="50000-75000">50,000 – 75,000 miles</option>
+                  <option value="75000-100000">75,000 – 100,000 miles</option>
+                  <option value="100000+">Over 100,000 miles</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="vehicle-condition">General Condition</label>
+                <select id="vehicle-condition" name="condition" required>
+                  <option value="">Select condition</option>
+                  <option value="excellent">Excellent – Like new, no issues</option>
+                  <option value="good">Good – Minor wear, well maintained</option>
+                  <option value="fair">Fair – Some wear or minor repairs needed</option>
+                  <option value="rough">Rough – Noticeable issues or repairs needed</option>
+                </select>
+              </div>
+
+              <div class="cta-wrapper">
+                <button type="submit" class="btn btn-primary" id="submit-btn">
+                  See What the Market Looks Like
+                </button>
+                <p class="trust-microcopy">No obligation. No pricing. Just information.</p>
+              </div>
+            </form>
+          </div>
         </div>
-    </div>
+      </section>
 
-    <footer>
-        Intentra - Vehicle Acquisition Intelligence
+      <!-- Results Section (Hidden by default) -->
+      <section class="results-section" id="results-section" hidden>
+        <div class="container container-narrow">
+          <div class="results-card">
+            <h2 class="section-title">Current Market Interest</h2>
+            <p class="results-intro">Based on what you shared, here's a general look at market activity for vehicles like yours.</p>
+
+            <div class="results-content">
+              <div class="interest-indicator" id="interest-indicator">
+                <div class="interest-level" id="interest-level"></div>
+                <div class="interest-label" id="interest-label"></div>
+              </div>
+
+              <div class="results-summary" id="results-summary">
+                <!-- Dynamic content inserted here -->
+              </div>
+            </div>
+
+            <p class="results-disclaimer">This reflects general market activity and is not an offer, quote, or appraisal. No pricing is shown.</p>
+
+            <!-- Secondary CTA - appears after results -->
+            <div class="secondary-cta-wrapper">
+              <p class="followup-prompt">Curious to learn more?</p>
+              <button type="button" class="btn btn-secondary" id="learn-more-btn">
+                Request More Information
+              </button>
+              <p class="trust-microcopy">Completely optional — we'll only reach out if you ask.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form Section (Hidden by default) -->
+      <section class="contact-section" id="contact-section" hidden>
+        <div class="container container-narrow">
+          <div class="contact-card">
+            <h2 class="section-title">Want to learn more?</h2>
+            <p class="helper-text">If you're curious, share a few details and we'll send you more information.</p>
+
+            <form id="contact-form" class="contact-form" name="market-interest" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="market-interest">
+              <input type="hidden" name="vehicle-info" id="hidden-vehicle-info">
+              <input type="hidden" name="interest-level" id="hidden-interest-level">
+
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone <span class="optional-label">(optional)</span></label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+
+              <div class="cta-wrapper">
+                <button type="submit" class="btn btn-primary">
+                  Request More Information
+                </button>
+                <p class="trust-microcopy">Your information is only used if you choose to share it.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Success Message (Hidden by default) -->
+      <section class="success-section" id="success-section" hidden>
+        <div class="container container-narrow">
+          <div class="success-card">
+            <div class="success-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h2 class="section-title">You're all set</h2>
+            <p class="success-message">Thanks for your interest. We've received your information and will be in touch — only because you asked us to be.</p>
+            <button type="button" class="btn btn-secondary" id="start-over-btn">
+              Check Another Vehicle
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p class="footer-text">A simple way to explore market interest — no pressure, no commitment.</p>
+
+        <!-- Privacy Note -->
+        <div class="privacy-note">
+          <p class="privacy-title">Your Privacy</p>
+          <p class="privacy-text">
+            You can explore anonymously — no account or personal information required to see results.
+            Your information is never sold, and we don't identify you through IP addresses or cookies.
+            We only reach out if you choose to share your details.
+          </p>
+        </div>
+      </div>
     </footer>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
